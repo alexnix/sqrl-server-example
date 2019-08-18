@@ -6,6 +6,7 @@
 		<groupId>com.github.sqrlserverjava</groupId>
 		<artifactId>sqrl-server-parent</artifactId>
 		<version>1.2.3-SNAPSHOT</version>
+		<relativePath>./sqrl-server-parent/pom.xml</relativePath>
 	</parent>
 	<artifactId>sqrlexample</artifactId>
 	<packaging>war</packaging>
@@ -17,17 +18,25 @@
 		<!-- Default, can be overridden by passing -Dtomcat.manager.url=...  -->
 	    <tomcat.manager.url>http://127.0.0.1:8010/manager/text</tomcat.manager.url>
 	</properties>
+
+	<repositories>
+		<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<dependency>
-			<groupId>com.github.sqrlserverjava</groupId>
-			<artifactId>sqrl-server-base</artifactId>
-			<version>0.9.5-SNAPSHOT</version>
-		</dependency>
+	    <groupId>com.github.sqrlserverjava</groupId>
+	    <artifactId>sqrl-server-base</artifactId>
+	    <version>master-SNAPSHOT</version>
+	</dependency>
 		<dependency>
-			<groupId>com.github.sqrlserverjava</groupId>
-			<artifactId>sqrl-server-atmosphere</artifactId>
-			<version>1.1.0-SNAPSHOT</version>
-		</dependency>
+	    <groupId>com.github.alexnix</groupId>
+	    <artifactId>sqrl-server-atmosphere</artifactId>
+	    <version>master-SNAPSHOT</version>
+	</dependency>
 		<dependency>
 			<!-- Reference JPA provider, substitute with another JPA provider as desired-->
 			<groupId>org.eclipse.persistence</groupId>
@@ -43,7 +52,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>6.0.6</version>
+			<version>8.0.11</version>
 		</dependency>
 		<dependency>
 		    <groupId>ch.qos.logback</groupId>
@@ -84,7 +93,7 @@
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.3.8.v20160314</version>
+				<version>9.4.19.v20190610</version>
 
 				<configuration>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
@@ -116,6 +125,16 @@
 					</items>
 				</configuration>
 			</plugin>
+
+			<plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>exec-maven-plugin</artifactId>
+      <version>1.2.1</version>
+      <configuration>
+          <mainClass>com.myorganisationname.common.App</mainClass>
+      </configuration>
+  </plugin>
+
 			<plugin>
 				<!-- Include very detailed build info for logging -->
 				<groupId>net.mgorski.quicktag</groupId>

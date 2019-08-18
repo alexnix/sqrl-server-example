@@ -11,9 +11,9 @@
 			<property name="eclipselink.logging.level" value="CONFIG" />
             <property name="eclipselink.target-database" value="MYSQL" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://jj/sqrllaptop?serverTimezone=America/New_York&amp;character_set_server=utf8mb4" />
-            <property name="javax.persistence.jdbc.user" value="sqrl" />
-            <property name="javax.persistence.jdbc.password" value="WEdtYtf8KNGmc77T" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/test?serverTimezone=America/New_York&amp;character_set_server=utf8mb4" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="root" />
 		</properties>
 	</persistence-unit>
 	<!-- The java SQRL persistence unit -->
@@ -27,9 +27,9 @@
 			<property name="eclipselink.logging.level" value="CONFIG" />
             <property name="eclipselink.target-database" value="MYSQL" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://jj/sqrllaptop?serverTimezone=America/New_York&amp;character_set_server=utf8mb4" />
-            <property name="javax.persistence.jdbc.user" value="sqrl" />
-            <property name="javax.persistence.jdbc.password" value="WEdtYtf8KNGmc77T" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/test?serverTimezone=America/New_York&amp;character_set_server=utf8mb4" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="root" />
 		</properties>
 	</persistence-unit>
 </persistence>
